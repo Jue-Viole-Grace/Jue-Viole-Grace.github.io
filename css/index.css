@@ -1,5 +1,5 @@
 body {
-    background: url("../images/bg.jpg");
+    background: url("../images-ignore/bg.jpg");
     background-size: cover;
 }
 .wrap {
@@ -49,10 +49,17 @@ div.content {
 div.content a {
     float: left;
     width: 20%;
-    height: 450px;
+    height: 420px;
     padding-left: 10px;
     padding-right: 10px;
 }
 div.content a img {
     width: 100%;
+}
+div.content a span {
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
 }
