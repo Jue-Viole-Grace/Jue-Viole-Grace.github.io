@@ -55,6 +55,7 @@ div.content a {
 }
 div.content a img {
     width: 100%;
+    height: 90%;
 }
 div.content a span {
     display: inline-block;
