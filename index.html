@@ -5,92 +5,254 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>404</title>
+    <title>你好欢迎</title>
     <link rel="shortcut icon" href="./link.ico">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .all {
+            width: 500px;
+            height: 200px;
+            padding: 7px;
+            border: 1px dashed #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000px;
+        }
+
+        .all ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, .3);
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 10px;
+            -webkit-user-select: none;
+        }
+
+        .all ol li.current {
+            background: #fff;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>你好 欢迎 页面维护中</h1>
-    <!-- <div class="wrap">
-        <div class="top-bar">
-            <ul class="tab-list clearfix">
-                <li tab-year="1995-2006" class="active">1995-2006</li>
-                <li tab-year="2007-2010">2007-2010</li>
-                <li tab-year="2011-2013">2011-2013</li>
-                <li tab-year="2014-2015">2014-2015</li>
-                <li tab-year="2016-2020">2016-2020</li>
+    <div class="all" id='box'>
+        <div class="screen">
+            <ul>
+                <li><img src="images/01.jpg" width="500" height="200" /></li>
+                <li><img src="images/02.jpg" width="500" height="200" /></li>
+                <li><img src="images/03.jpg" width="500" height="200" /></li>
+                <li><img src="images/04.jpg" width="500" height="200" /></li>
+                <li><img src="images/05.jpg" width="500" height="200" /></li>
+                <li><img src="images/01.jpg" width="500" height="200" /></li>
+                <!-- 给第五张图片后面再加一张第一张   -->
             </ul>
+            <ol>
+                <li class="current">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
         </div>
-        <div class="container">
-
-            <div class="content selected" tab-year="1995-2006">
-                <a href="javascript:void(0);"><img src="" alt=""><span>1995 EVA</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>1997 柯南剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>1999 数码宝贝剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2000 海贼王剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 棋魂</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 通灵王</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 机动战士高达SEED系列</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 驭龙少年</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-            </div>
-
-            <div class="content" tab-year="2007-2010">
-                <a href="javascript:void(0);"><img src="" alt=""><span>1997 柯南剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>1999 数码宝贝剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2000 海贼王剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 棋魂</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 通灵王</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 机动战士高达SEED系列</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 驭龙少年</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-            </div>
-
-            <div class="content" tab-year="2011-2013">
-                <a href="javascript:void(0);"><img src="" alt=""><span>1999 数码宝贝剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2000 海贼王剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 棋魂</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 通灵王</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 机动战士高达SEED系列</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 驭龙少年</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-            </div>
-
-            <div class="content" tab-year="2014-2015">
-                <a href="javascript:void(0);"><img src="" alt=""><span>2000 海贼王剧场版</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 棋魂</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 通灵王</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 机动战士高达SEED系列</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 驭龙少年</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-            </div>
-
-            <div class="content" tab-year="2016-2020">
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 棋魂</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2001 通灵王</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 机动战士高达SEED系列</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2002 驭龙少年</span></a>
-                <a href="javascript:void(0);"><img src="" alt=""><span>2004 抓鬼天狗帮</span></a>
-            </div>
+        <div id="arr">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
         </div>
     </div>
 
-    <script src="./js/jquery-1.12.4.js"></script>
-    <script>
-        $(function(){
-            $('.tab-list li').on('click',function(){
-                $(this).addClass('active').siblings('li').removeClass('active');
-                let year = $(this).attr('tab-year');
-                $(`.container>div[tab-year=${year}]`).addClass('selected').siblings('div').removeClass('selected');
-            });
+    <script src="animation.js"></script>
 
-        });
-    </script> -->
+    <script>
+        /*轮播图需求(交互)分析
+        1 鼠标移入轮播区域显示左右翻页按钮，移出则隐藏左右按钮
+        2 点击上一页下一页，ul大盒子对应地滚动
+        3 点击页码，滚动到对应的位置
+        * 无限轮播思路：最后一张点下一页，则修改轮播图为第一张的位置
+        * 自动轮播：
+            1 自动模式：页面一加载，开启一个定时器，触发点击下一页
+            2 手动模式：鼠标移入清除定时器，移除则再开启定时器
+        */
+        //自动轮播1：页面一加载开启自动模式
+        var timeID = setInterval(nextPage, 3000);
+
+        //1 获取页面元素注册对应的事件
+        var box = document.querySelector('#box');//外层大盒子
+        var arrow = document.querySelector('#arr');//上一页和下一页的父盒子
+        var left = document.querySelector('#left');//上一页按钮
+        var right = document.querySelector('#right');//下一页按钮
+        var screen = document.querySelector('.screen');//轮播图显示区域盒子
+        var ul = document.querySelector('.screen>ul');//轮播图盒子
+        var ol = document.querySelector('.screen>ol');//轮播图页码盒子
+        //声明一个全局变量记录当前轮播图的下标
+        var index = 0;
+
+        //2 注册事件
+        //2.1 鼠标移入box
+        box.onmouseenter = function () {
+            arrow.style.display = 'block';
+            clearInterval(timeID);//自动轮播2：移入清除定时器
+        };
+        //2.2 鼠标移出box
+        box.onmouseleave = function () {
+            arrow.style.display = 'none';
+            //自动轮播3：开启定时器
+            timeID = setInterval(nextPage, 3000);
+        };
+
+        //2.3 点击下一页
+        //函数封装
+        function nextPage() {
+            //3 事件处理：ul对应滚动
+            //3.0 如果是最后一页，则跳到第一页
+            if (index == ul.children.length - 1) {
+                ul.style.left = 0;//将ul的left直接赋值0
+                index = 0;//将index变成0，此处后会立即触发后面的index++，跳到第二张的位置
+                //把第一张图添加一张到最后假装是第一张图可以解决这个问题，注意此时需修改ul的宽度
+            };
+            //3.1 下一页
+            index++;
+            //3.2 开始滚动
+            animationMove(ul, -index * screen.offsetWidth);
+            //3.3 排他思想修改页码样式
+            for (var i = 0; i < ol.children.length; i++) {
+                if (index == i) {
+                    ol.children[i].className = 'current';
+                } else {
+                    ol.children[i].className = '';
+                };
+            };
+            //3.4 如果是最后一张，手动修改第一个页码为高亮
+            if (index == ul.children.length - 1) {
+                ol.children[0].className = 'current';
+            };
+        };
+        right.onclick = function () {
+            nextPage();
+        };
+
+        //2.4 点击上一页
+        left.onclick = function () {
+            //3 事件处理：ul对应滚动
+            //3.0 如果是第一页
+            if (index == 0) {
+                ul.style.left = -(ul.children.length - 1) * screen.offsetWidth + 'px';
+                index = ul.children.length - 1;
+            };
+            //3.1 上一页
+            index--;
+            //3.2 开始滚动
+            animationMove(ul, -index * screen.offsetWidth);
+            //3.3 排他修改页码样式
+            for (var i = 0; i < ol.children.length; i++) {
+                if (index == i) {
+                    ol.children[i].className = 'current';
+                } else {
+                    ol.children[i].className = '';
+                };
+            };
+            //3.4 如果是最后一张，手动修改第一个页码为高亮
+            if (index == ul.children.length - 1) {
+                ol.children[0].className = 'current';
+            };
+        };
+
+        //2.5 页码点击事件
+        //遍历ol里面的li
+        for (var i = 0; i < ol.children.length; i++) {
+            //(1)给每一个li添加自定义索引
+            ol.children[i].setAttribute('yemaIndex', i);
+            //(2)给每一个页码注册点击事件
+            ol.children[i].onclick = function () {
+                //3.1 获取当前点击的页码下标
+                var yemaIndex = this.getAttribute('yemaIndex');
+                //3.2修改index，设置对应滚动的图片
+                index = yemaIndex;
+                //3.3开始滚动
+                //如果ul的位置是最后一张，为了避免反向滚动，提前瞬间把ul放到第一张
+                if (ul.offsetLeft == -(ul.children.length - 1) * screen.offsetWidth) {
+                    ul.style.left = 0;
+                };
+                animationMove(ul, -index * screen.offsetWidth);
+                //3.4 排他思想修改样式
+                for (var j = 0; j < ol.children.length; j++) {
+                    if (j == index) {
+                        ol.children[j].className = 'current';
+                    } else {
+                        ol.children[j].className = '';
+                    };
+                };
+
+            };
+        };
+
+
+    </script>
 </body>
 
 </html>
